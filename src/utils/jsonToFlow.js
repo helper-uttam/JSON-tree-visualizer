@@ -10,7 +10,7 @@ export function jsonToFlow(json) {
         // create node with simple position
         nodes.push({
             id,
-            data: { label: id, value, type },
+            data: { label: id, value, type, path },
             position: { x: xCounter * 200, y: depth * 100 } // horizontal spacing
         });
 
