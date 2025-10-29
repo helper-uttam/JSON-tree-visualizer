@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="340" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340">
+  <style>
+    .bg { fill: #0f1724; }
+    .card { fill: #0b1220; stroke: #1f2937; stroke-width: 1; rx: 8; }
+    .title { fill: #e6eef8; font-family: Arial, Helvetica, sans-serif; font-size: 18px; }
+    .sub { fill: #9fb3d2; font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+    .node { fill: #0b1220; stroke: #2b6cb0; stroke-width: 1.5; rx: 6; }
+    .ntext { fill: #dbeefc; font-size: 12px; font-family: Arial, Helvetica, sans-serif; }
+    .muted { fill: #94a3b8; font-size: 11px; }
+    .search { fill: #06202f; stroke: #1e293b; rx: 6; }
+  </style>
+  <rect class="bg" width="100%" height="100%"/>
+
+  <g transform="translate(20,18)">
+    <rect class="card" x="0" y="0" width="860" height="300" />
+    <text x="20" y="28" class="title">JSON Tree Visualizer — demo</text>
+    <text x="20" y="48" class="sub">Paste JSON on the left and explore the expandable tree on the right.</text>
+
+    <!-- left panel (input) -->
+    <rect x="20" y="70" width="340" height="200" fill="#071028" rx="6" stroke="#123047" />
+    <text x="30" y="92" class="muted">JSON Input</text>
+    <rect x="30" y="100" width="320" height="150" fill="#031122" rx="4" stroke="#0b2a3e" />
+    <text x="40" y="122" class="ntext">{</text>
+    <text x="60" y="142" class="ntext">"user": {{ ... }}</text>
+    <text x="60" y="162" class="ntext">"items": [ ... ]</text>
+    <text x="40" y="182" class="ntext">}</text>
+
+    <!-- middle controls -->
+    <rect x="380" y="70" width="180" height="44" class="search" />
+    <text x="392" y="98" class="muted">Search: <tspan class="ntext">"name"</tspan></text>
+
+    <!-- right panel (tree) -->
+    <rect x="580" y="70" width="260" height="200" fill="#031428" rx="6" stroke="#16466a" />
+    <text x="590" y="92" class="muted">Tree</text>
+
+    <!-- nodes -->
+    <g transform="translate(400,130)">
+      <rect class="node" x="0" y="0" width="220" height="36" />
+      <text class="ntext" x="12" y="22">root</text>
+
+      <rect class="node" x="-70" y="60" width="160" height="32" />
+      <text class="ntext" x="-58" y="80">user</text>
+
+      <rect class="node" x="110" y="60" width="120" height="32" />
+      <text class="ntext" x="122" y="80">items (3)</text>
+
+      <rect class="node" x="-120" y="120" width="140" height="28" />
+      <text class="ntext" x="-108" y="138">id: 42</text>
+
+      <rect class="node" x="40" y="120" width="180" height="28" />
+      <text class="ntext" x="52" y="138">name: "Sample"</text>
+
+      <!-- connectors -->
+      <line x1="40" y1="18" x2="-2" y2="60" stroke="#4299e1" stroke-width="1.6" stroke-linecap="round" />
+      <line x1="140" y1="18" x2="160" y2="60" stroke="#4299e1" stroke-width="1.6" stroke-linecap="round" />
+      <line x1="10" y1="48" x2="-50" y2="120" stroke="#4299e1" stroke-width="1.2" stroke-linecap="round" />
+      <line x1="80" y1="48" x2="120" y2="120" stroke="#4299e1" stroke-width="1.2" stroke-linecap="round" />
+
+      <!-- highlighted search result -->
+      <rect x="40" y="120" width="180" height="28" fill="#08304a" rx="4" />
+      <text class="ntext" x="52" y="138">name: "Sample"</text>
+    </g>
+
+    <text x="30" y="288" class="muted">Tip: Click nodes to expand/collapse. Use search to highlight matches.</text>
+  </g>
+</svg>

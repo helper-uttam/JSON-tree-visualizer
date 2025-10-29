@@ -13,6 +13,12 @@
 
  This project is an educational and practical tool for developers and data engineers who want a quick way to inspect JSON payloads.
 
+## Demo / Screenshots
+
+You can find a simple visual demo below showing the app layout (JSON input, search, and the rendered tree). It's a schematic SVG that acts like a screenshot for quick reference.
+
+![Demo screenshot](./assets/demo.svg)
+
  ## Technologies used
 
  - React (Create React App)
