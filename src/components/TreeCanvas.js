@@ -39,16 +39,15 @@ export default function TreeCanvas({ nodes: inputNodes, edges: inputEdges, highl
             return;
         }
 
-        const styled = inputNodes.map(n => {
-            const base = { ...n };
-            const t = base.data.type;
+        const styled = inputNodes.map(node => {
+            const t = node.data.type;
             const bg = nodeColorByType(t);
-            base.style = { ...base.style, background: bg, color: '#fff' };
-            if (highlightPath && base.data.path === highlightPath) {
-                base.style = { ...base.style, boxShadow: '0 0 0 4px rgba(99,102,241,0.25)', background: '#ef4444' };
+            node.style = { ...node.style, background: bg, color: '#fff' };
+            if (highlightPath && node.data.path === highlightPath) {
+                node.style = { ...node.style, boxShadow: '0 0 0 4px rgba(99,102,241,0.25)', background: '#ef4444' };
             }
-            base.data = { ...base.data, label: `${base.data.label} ${base.data.displayValue ? `: ${base.data.displayValue}` : ''}` };
-            return base;
+            node.data = { ...node.data, label: `${node.data.label} ${node.data.displayValue ? `: ${node.data.displayValue}` : ''}` };
+            return node;
         });
         setNodes(styled);
         setEdges(inputEdges || []);
@@ -105,9 +104,9 @@ export default function TreeCanvas({ nodes: inputNodes, edges: inputEdges, highl
                 </button>
             </div>
 
-            <div id="flow-wrapper" ref={wrapperRef} style={{ width: '100%', height: 'calc(100vh - 200px)' }}>
+            <div id="flow-wrapper" ref={wrapperRef} style={{ width: '100%', height: '100vh' }}>
                 <ReactFlow nodes={nodes} edges={edges} onNodeClick={onNodeClick} fitView onInit={setRfInstance}>
-                    <Background gap={16} />
+                    <Background gap={18} />
                     <Controls />
                 </ReactFlow>
             </div>

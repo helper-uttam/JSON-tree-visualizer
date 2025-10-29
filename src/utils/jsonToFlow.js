@@ -15,7 +15,7 @@ export function jsonToFlow(json) {
         });
 
         if (parentId) {
-            edges.push({ id: `${parentId}-${id}`, source: parentId, target: id });
+            edges.push({ id: `${parentId}-${id}`, source: parentId, target: id, label: type });
         }
 
         xCounter += 1; // next node thoda right me
