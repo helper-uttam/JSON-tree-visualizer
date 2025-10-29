@@ -1,3 +1,77 @@
+ # JSON Tree Visualizer
+
+ An interactive React application that renders JSON data as an expandable, searchable tree. Useful for exploring nested JSON structures, debugging API responses, and visualizing object graphs in a human-friendly way.
+
+ ## About
+
+ `JSON Tree Visualizer` lets you paste or load JSON and displays it as a collapsible tree. Features include:
+
+ - Expand / collapse nodes
+ - Search keys and values with highlighting
+ - Keyboard and mouse friendly canvas for navigation
+ - Lightweight and dependency-minimal UI for fast rendering of reasonably-sized JSON
+
+ This project is an educational and practical tool for developers and data engineers who want a quick way to inspect JSON payloads.
+
+ ## Technologies used
+
+ - React (Create React App)
+ - JavaScript (ES6+)
+ - HTML5 & CSS3
+ - Browser APIs (Canvas/SVG where applicable)
+
+ Key project files:
+
+ - `src/App.js` — application root
+ - `src/components/TreeCanvas.js` — tree rendering and interaction
+ - `src/components/JSONInput.js` — JSON paste / load UI
+ - `src/utils/jsonToFlow.js` — transforms JSON into the internal tree flow
+
+ ## Setting up the React app locally (Windows PowerShell)
+
+ Prerequisites:
+
+ - Node.js (14+ recommended) and npm (or yarn)
+
+ Clone the repository and install dependencies:
+
+ ```powershell
+ # from your preferred dev folder
+ git clone https://github.com/helper-uttam/JSON-tree-visualizer.git
+ cd JSON-tree-visualizer
+ npm install
+ ```
+
+ Run the dev server:
+
+ ```powershell
+ npm start
+ # Opens http://localhost:3000 by default
+ ```
+
+ Run tests (if any):
+
+ ```powershell
+ npm test
+ ```
+
+ Build for production:
+
+ ```powershell
+ npm run build
+ ```
+
+ ## Contributing
+
+ Contributions are welcome. Please open an issue for feature requests or bugs, and send a pull request for code changes.
+
+ ## License
+
+ This project is provided under the MIT License — see the `LICENSE` file (if present) or add one if you plan to open-source the repo.
+
+ ---
+
+ If you'd like, I can also add a short demo GIF, badges (build, license), or a troubleshooting / FAQ section next. Let me know which extras you want.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
